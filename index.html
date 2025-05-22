@@ -1,46 +1,48 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Limpiezas Fani</title>
-  <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Limpiezas y Fani</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <header class="main-header">
-    <div class="logo-container">
-      <img src="LogoLimpiezasFani_2.png" alt="Logo Limpiezas Fani" class="logo">
-    </div>
-
-    <nav class="main-nav">
-      <ul>
-        <li><a href="index.html" target="_blank">Inicio</a></li>
-        <li><a href="quienes-somos.html" target="_blank">¿Quiénes somos?</a></li>
-        <li><a href="servicios.html" target="_blank">Servicios</a></li>
-        <li class="dropdown">
-          <a href="contacto.html" target="_blank">Contacto</a>
-          <ul class="submenu">
-            <li><a href="trabaja-con-nosotros.html" target="_blank">Trabaja con nosotros</a></li>
-            <li><a href="presupuesto.html" target="_blank">Pide tu presupuesto</a></li>
-          </ul>
-        </li>
-        <li><a href="faq.html" target="_blank">F&Q</a></li>
-      </ul>
-      <div class="search-container">
-        <input type="text" id="busqueda" placeholder="Buscar...">
-        <button id="boton-busqueda">
-          🔍
-        </button>
+    <div class="container">
+      <div class="logo-container">
+        <img src="LogoLimpiezasFani_2.png" alt="Logo Limpiezas Fani" class="logo" />
       </div>
-    </nav>
+      <nav role="navigation" aria-label="Menú principal">
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="#">Servicios</a></li>
+          <li><a href="#">Nosotros</a></li>
+          <li class="submenu-parent">
+            <a href="#" aria-haspopup="true" aria-expanded="false">Contacto ▼</a>
+            <ul class="submenu" aria-label="Submenú contacto">
+              <li><a href="trabaja.html">Trabaja con nosotros</a></li>
+              <li><a href="presupuesto.html">Pide tu presupuesto</a></li>
+            </ul>
+          </li>
+          <li class="search-li">
+            <form class="search-form" action="#" method="GET" role="search">
+              <input type="search" name="q" placeholder="Buscar..." aria-label="Buscar en el sitio" />
+              <button type="submit" aria-label="Buscar">🔍</button>
+            </form>
+          </li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
   <footer>
-    <p>&copy; 2025 Limpiezas Fani. Todos los derechos reservados.</p>
-    <p>Estefanía Orts Marín</p>
-    <p>CIF: 53230198X</p>
-    <p>Email: limpiezasfani@gmail.com</p>
-    <p>Teléfono: +34 645 91 95 55</p>
+    <div class="container-footer">
+      <p>&copy; 2025 Limpiezas Fani. Todos los derechos reservados.</p>
+      <p>Estefanía Orts Marín</p>
+      <p>CIF: 53230198X</p>
+      <p>Email: <a href="mailto:limpiezasfani@gmail.com">limpiezasfani@gmail.com</a></p>
+      <p>Teléfono: <a href="tel:+34645919555">+34 645 91 95 55</a></p>
+    </div>
   </footer>
 
   <script src="script.js"></script>
