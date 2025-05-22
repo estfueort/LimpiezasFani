@@ -1,65 +1,85 @@
-body {
-  font-family: Arial, sans-serif;
-  line-height: 1.6;
-  margin: 0;
-  background: #f5f5f5;
-}
-
-header {
-  background: #005f73;
+/* Logo y nav */
+.main-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #005f73;
   color: white;
-  padding: 1em;
-  text-align: center;
-}
-
-nav a {
-  color: white;
-  margin: 0 15px;
-  text-decoration: none;
-}
-
-section {
-  padding: 20px;
-  max-width: 800px;
-  margin: auto;
-  background: white;
-  margin-bottom: 20px;
-  border-radius: 10px;
-}
-
-form input, form textarea, form select {
-  width: 100%;
-  padding: 10px;
-  margin: 10px 0;
-  border-radius: 5px;
-  border: 1px solid #ccc;
-}
-
-form button {
-  background: #0a9396;
-  color: white;
-  border: none;
   padding: 10px 20px;
-  border-radius: 5px;
-  cursor: pointer;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
-form button:hover {
-  background: #007f85;
+.logo {
+  height: 50px;
 }
 
-footer {
-  text-align: center;
-  padding: 1em;
-  background: #005f73;
+.main-nav ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+.main-nav ul li {
+  position: relative;
+  margin: 0 15px;
+}
+
+.main-nav ul li a {
   color: white;
+  text-decoration: none;
+  font-weight: bold;
 }
+
+.submenu {
+  display: none;
+  position: absolute;
+  background-color: #0a9396;
+  top: 100%;
+  left: 0;
+  padding: 10px 0;
+  min-width: 200px;
+  border-radius: 5px;
+}
+
+.submenu li a {
+  display: block;
+  padding: 8px 15px;
+}
+
+.dropdown:hover .submenu {
+  display: block;
+}
+
+.search-container {
+  display: flex;
+  align-items: center;
+}
+
+.search-container input {
+  padding: 5px;
+  border-radius: 5px 0 0 5px;
+  border: none;
+}
+
+.search-container button {
+  padding: 5px 10px;
+  background: #0a9396;
+  border: none;
+  color: white;
+  border-radius: 0 5px 5px 0;
+}
+
+/* Galería de servicios */
 .galeria-servicios {
   display: flex;
-  justify-content: center;
   flex-wrap: wrap;
+  justify-content: center;
   gap: 20px;
-  padding: 40px;
+  padding: 20px;
 }
 
 .card {
@@ -71,9 +91,9 @@ footer {
 .card-inner {
   width: 100%;
   height: 100%;
-  position: relative;
   transition: transform 0.6s;
   transform-style: preserve-3d;
+  position: relative;
 }
 
 .card:hover .card-inner {
@@ -85,8 +105,6 @@ footer {
   width: 100%;
   height: 100%;
   backface-visibility: hidden;
-  border-radius: 10px;
-  overflow: hidden;
 }
 
 .card-front img {
@@ -96,29 +114,13 @@ footer {
 }
 
 .card-back {
-  background-color: #0a9396;
+  background: #0a9396;
   color: white;
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
   transform: rotateY(180deg);
-  font-size: 1.2em;
   padding: 10px;
   text-align: center;
-}
-nav {
-  background: #0a9396;
-  text-align: center;
-  padding: 10px 0;
-}
-
-nav a {
-  color: white;
-  text-decoration: none;
-  margin: 0 15px;
-  font-weight: bold;
-}
-
-nav a:hover {
-  text-decoration: underline;
+  border-radius: 10px;
 }
