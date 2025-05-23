@@ -1,147 +1,83 @@
-/* Header principal */
-.main-header {
+.logoContainer {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  background-color: #005f73;
-  color: white;
-  padding: 10px 20px;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
 }
 
-/* Logo */
 .logo {
   height: 50px;
   cursor: pointer;
 }
 
-/* Navegación principal */
-.main-nav ul {
-  list-style: none;
-  display: flex;
-  align-items:last baseline;
-  margin: 0;
-  padding: 0;
-  gap: 25px;
-}
-
-/* Elementos de la lista */
-.main-nav ul li {
+/* Imagen principal */
+.imagenPrincipal {
+  background-image: url('zaguan.jpg');
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  color: white;
+  padding: 100px 20px;
   position: relative;
 }
 
-/* Links principales */
-.main-nav ul li a {
-  color: white;
-  text-decoration: none;
-  font-weight: 700;
-  padding: 6px 10px;
-  border-radius: 4px;
-  transition: background-color 0.3s ease;
+.imagenPrincipalContent {
+  background-color: rgba(0, 0, 0, 0.5);
   display: inline-block;
+  padding: 30px;
+  border-radius: 10px;
 }
 
-/* Hover en links */
-.main-nav ul li a:hover,
-.main-nav ul li a:focus {
-  background-color: #0a9396;
-  outline: none;
-}
-
-/* Submenú oculto */
-.submenu {
-  display: none;
-  position: absolute;
-  background-color: #0a9396;
-  top: 110%; /* un poco separado del menú padre */
-  left: 0;
-  padding: 10px 0;
-  min-width: 200px;
-  border-radius: 5px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
-  z-index: 2000;
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity 0.3s ease;
-}
-
-/* Links del submenú */
-.submenu li a {
-  display: block;
-  padding: 10px 20px;
-  font-weight: 600;
+/* Botón imagen principal */
+.imagenPrincipalBoton {
+  background: linear-gradient(to right, #0077b6, #00b4d8);
   color: white;
-  transition: background-color 0.3s ease;
+  padding: 12px 25px;
+  border: 2px solid white;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: bold;
+  margin-top: 20px;
+  display: inline-block;
+  transition: background 0.3s ease, transform 0.2s ease;
 }
 
-/* Hover submenú */
-.submenu li a:hover,
-.submenu li a:focus {
-  background-color: #094d4d;
-  outline: none;
+.imagenPrincipalBoton:hover {
+  background: linear-gradient(to right, #0096c7, #90e0ef);
+  transform: scale(1.05);
+}
+.main-header {
+  background-color: #aed4e9;
+  color: #002b36;
+  padding: 10px 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
 }
 
-/* Mostrar submenú al pasar mouse o focus en el padre */
-.submenu-parent:hover > .submenu,
-.submenu-parent:focus-within > .submenu {
-  display: block;
-  opacity: 1;
-  visibility: visible;
+.header-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-/* Contenedor del buscador */
-.search-container {
+.logoContainer {
   display: flex;
   align-items: center;
-  border-radius: 5px;
-  overflow: hidden;
-  border: 1px solid #0a9396;
-  background-color: white;
-  width: 180px;
 }
 
-/* Input buscador */
-.search-container input {
-  flex-grow: 1;
-  padding: 7px 12px;
-  border: none;
-  font-size: 1rem;
-  outline-offset: 2px;
-}
-
-.search-container input:focus {
-  outline: 2px solid #0a9396;
-}
-
-/* Botón buscador */
-.search-container button {
-  background: #0a9396;
-  border: none;
-  color: white;
-  padding: 7px 15px;
+.logo {
+  height: 50px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+}
+.main-nav ul {
+  list-style: none;           /* 🔹 Oculta los puntos */
+  display: flex;              /* 🔹 Alinea en fila horizontal */
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  gap: 25px;                  /* 🔹 Espaciado entre elementos */
 }
 
-.search-container button:hover,
-.search-container button:focus {
-  background-color: #088585;
-  outline: none;
+.main-nav ul li {
+  display: inline-block;      /* 🔹 Por si se usa fuera del flex también */
 }
-
-/* Galería de servicios */
-.galeria-servicios {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
-  padding: 20px;
-}
-
-/* Tarjetas */
-.card {
-  width: 250px;
-  height: 200px;
-  perspecti

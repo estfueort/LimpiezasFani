@@ -16,3 +16,11 @@ document.addEventListener('DOMContentLoaded', () => {
     boton.addEventListener('click', buscar);
   }
 });
+document.querySelector('.search-form').addEventListener('submit', function(e) {
+  e.preventDefault();
+  const query = this.q.value.trim().toLowerCase();
+  if (query) {
+    alert(`Buscando: ${query}`);
+  }
+});
+

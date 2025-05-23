@@ -3,37 +3,52 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Limpiezas y Fani</title>
+  <title>Limpiezas Fani</title>
   <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
 </head>
 <body>
   <header class="main-header">
-    <div class="container">
-      <div class="logo-container">
-        <img src="LogoLimpiezasFani_2.png" alt="Logo Limpiezas Fani" class="logo" />
-      </div>
-      <nav role="navigation" aria-label="Menú principal">
-        <ul>
-          <li><a href="index.html">Inicio</a></li>
-          <li><a href="#">Servicios</a></li>
-          <li><a href="#">Nosotros</a></li>
-          <li class="submenu-parent">
-            <a href="#" aria-haspopup="true" aria-expanded="false">Contacto ▼</a>
-            <ul class="submenu" aria-label="Submenú contacto">
-              <li><a href="trabaja.html">Trabaja con nosotros</a></li>
-              <li><a href="presupuesto.html">Pide tu presupuesto</a></li>
-            </ul>
-          </li>
-          <li class="search-li">
-            <form class="search-form" action="#" method="GET" role="search">
+  <div class="container header-flex">
+    <div class="logoContainer">
+      <img src="LogoLimpiezasFani_2.png" alt="Logo de la empresa Limpiezas Fani" class="logo" />
+    </div>
+    <nav class="main-nav" role="navigation" aria-label="Menú principal">
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="quienesSomos.html">¿Quiénes somos?</a></li>
+        <li><a href="servicios.html">Servicios</a></li>
+        <li class="submenu-parent">
+          <a href="#" aria-haspopup="true" aria-expanded="false" id="contactoToggle">Contacto</a>
+          <ul class="submenu" aria-labelledby="contactoToggle">
+            <li><a href="contactoPideTuPresupuesto.html">Pide tu presupuesto</a></li>
+            <li><a href="contactoTrabajaConNosotros.html">Trabaja con nosotros</a></li>
+          </ul>
+        </li>
+        <li><a href="faq.html">F&Q</a></li>
+        <li>
+          <form class="search-form" action="#" method="GET" role="search">
+            <div class="search-container">
               <input type="search" name="q" placeholder="Buscar..." aria-label="Buscar en el sitio" />
               <button type="submit" aria-label="Buscar">🔍</button>
-            </form>
-          </li>
-        </ul>
-      </nav>
-    </div>
-  </header>
+            </div>
+          </form>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+
+  <main class="container">
+    <section class="imagenPrincipal">
+      <div class="imagenPrincipalContent">
+        <h1>Estefanía Orts Marín</h1>
+        <p>Especializados en limpieza y mantenimiento</p>
+        <a href="contactoPideTuPresupuesto.html" class="imagenPrincipalBoton">Pide tu presupuesto</a>
+      </div>
+    </section>
+  </main>
 
   <footer>
     <div class="container-footer">
