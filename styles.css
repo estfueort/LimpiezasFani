@@ -1,3 +1,8 @@
+*{
+  background-color: #aed4e9;
+  margin: 0px;
+  padding: 0px;
+}
 .logoContainer {
   display: flex;
   align-items: center;
@@ -80,4 +85,135 @@
 
 .main-nav ul li {
   display: inline-block;      /* 🔹 Por si se usa fuera del flex también */
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f5faff;
+}
+
+.main-header {
+  background-color: #aed4e9;
+  color: #002b36;
+  padding: 10px 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo {
+  height: 50px;
+  cursor: pointer;
+}
+
+.main-nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  padding: 0;
+  margin: 10px 0;
+}
+
+.main-nav ul li {
+  display: inline-block;
+}
+
+.main-nav ul li a {
+  text-decoration: none;
+  background-color: #0058a5;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.main-nav ul li a:hover {
+  background-color: #0096c7;
+}
+
+main {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.formulario {
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  background-color: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.input {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+}
+
+.boton-enviar {
+  background-color: #0058a5;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.boton-enviar:hover {
+  background-color: #0096c7;
+}
+
+.preferencia-contacto {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: left;
+  gap: 40px;
+  margin-bottom: 15px;
+}
+
+.preferencia-contacto label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.formulario p {
+  text-align: left;
+  margin: 0;
+  font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  .navbar-brand img {
+    height: 80px !important;
+  }
 }
