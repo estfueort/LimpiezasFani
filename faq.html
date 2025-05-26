@@ -17,7 +17,7 @@
 </head>
 <body>
   <header>
-    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #aed4e9">
+    <nav class="navbar navbar-expand-lg navbar-ligth" style="background-color: #aed4e9;">
   <div class="container">
     <a class="navbar-brand" href="#">
       <img src="logoSinFondo.png" alt="Logo Limpiezas Fani" height="170">
@@ -31,17 +31,24 @@
         <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
         <li class="nav-item"><a class="nav-link" href="quienesSomos.html">¿Quiénes somos?</a></li>
         <li class="nav-item"><a class="nav-link" href="servicios.html">Servicios</a></li>
-        <li class="nav-item"><a class="nav-link" href="contactoTrabajaConNosotros.html">Trabaja con nosotros</a></li>
-        <li class="nav-item"><a class="nav-link" href="contactoPideTuPresupuesto.html">Pide tu presupuesto</a></li>
-        <li class="nav-item"><a class="nav-link" href="faq.html">F&Q</a></li>
-        <li>
-          <form class="search-form" action="#" method="GET" role="search">
-            <div class="search-container">
-              <input type="search" name="q" placeholder="Buscar..." aria-label="Buscar en el sitio" />
-              <button type="submit" aria-label="Buscar">🔍</button>
-            </div>
-          </form>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="contactoDropdown" role="button"
+            data-bs-toggle="dropdown" aria-expanded="false">
+            Contacto
+          </a>
+          <ul class="dropdown-menu dropdown-menu-end menu-contacto" style="background-color: #aed4e9;" aria-labelledby="contactoDropdown">
+            <li><a class="dropdown-item text-white" style="background-color: #aed4e9;" href="contactoTrabajaConNosotros.html">Trabaja con nosotros</a></li>
+            <li><a class="dropdown-item text-white" style="background-color:#aed4e9 ;"href="contactoPideTuPresupuesto.html">Pide tu presupuesto</a></li>
+          </ul>
         </li>
+        <li class="nav-item"><a class="nav-link" href="faq.html">F&Q</a></li>
+       <li class="nav-item">
+              <form class="d-flex align-items-center" action="#" method="GET" role="search">
+                <button class="btn " type="submit" aria-label="Buscar">🔍</button>
+                <input class="form-control me-2" type="search" name="q" placeholder="Buscar..." aria-label="Buscar" />
+                
+              </form>
+            </li>
       </ul>
     </div>
   </div>

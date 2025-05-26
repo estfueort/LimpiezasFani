@@ -1,8 +1,16 @@
-*{
+* {
   background-color: #aed4e9;
-  margin: 0px;
-  padding: 0px;
+  margin: 0;
+  padding: 0;
 }
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #aed4e9;
+}
+
 .logoContainer {
   display: flex;
   align-items: center;
@@ -13,7 +21,49 @@
   cursor: pointer;
 }
 
-/* Imagen principal */
+.main-header {
+  background-color: #aed4e9;
+  color: #aed4e9;
+  padding: 10px 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+}
+
+.header-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.main-nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+  margin: 10px 0;
+  padding: 0;
+}
+
+.main-nav ul li {
+  display: inline-block;
+}
+
+.main-nav ul li a {
+  text-decoration: none;
+  background-color: #aed4e9;
+  color: #aed4e9;
+  padding: 10px 20px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.main-nav ul li a:hover {
+  background-color: #aed4e9;
+}
+
 .imagenPrincipal {
   background-image: url('zaguan.jpg');
   background-size: cover;
@@ -31,7 +81,6 @@
   border-radius: 10px;
 }
 
-/* Botón imagen principal */
 .imagenPrincipalBoton {
   background: linear-gradient(to right, #0077b6, #00b4d8);
   color: white;
@@ -49,97 +98,6 @@
   background: linear-gradient(to right, #0096c7, #90e0ef);
   transform: scale(1.05);
 }
-.main-header {
-  background-color: #aed4e9;
-  color: #002b36;
-  padding: 10px 0;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  width: 100%;
-}
-
-.header-flex {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.logoContainer {
-  display: flex;
-  align-items: center;
-}
-
-.logo {
-  height: 50px;
-  cursor: pointer;
-}
-.main-nav ul {
-  list-style: none;           /* 🔹 Oculta los puntos */
-  display: flex;              /* 🔹 Alinea en fila horizontal */
-  align-items: center;
-  margin: 0;
-  padding: 0;
-  gap: 25px;                  /* 🔹 Espaciado entre elementos */
-}
-
-.main-nav ul li {
-  display: inline-block;      /* 🔹 Por si se usa fuera del flex también */
-}
-
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: #f5faff;
-}
-
-.main-header {
-  background-color: #aed4e9;
-  color: #002b36;
-  padding: 10px 0;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  width: 100%;
-}
-
-.logo-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.logo {
-  height: 50px;
-  cursor: pointer;
-}
-
-.main-nav ul {
-  list-style: none;
-  display: flex;
-  justify-content: center;
-  gap: 25px;
-  padding: 0;
-  margin: 10px 0;
-}
-
-.main-nav ul li {
-  display: inline-block;
-}
-
-.main-nav ul li a {
-  text-decoration: none;
-  background-color: #0058a5;
-  color: white;
-  padding: 10px 20px;
-  border-radius: 5px;
-  transition: background-color 0.3s ease;
-}
-
-.main-nav ul li a:hover {
-  background-color: #0096c7;
-}
 
 main {
   padding: 40px 20px;
@@ -155,7 +113,7 @@ main {
   background-color: white;
   padding: 30px;
   border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .input {
@@ -211,6 +169,7 @@ main {
   margin: 0;
   font-weight: bold;
 }
+
 
 @media (max-width: 768px) {
   .navbar-brand img {
