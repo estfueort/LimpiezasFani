@@ -1,97 +1,89 @@
-* {
-  background-color: #aed4e9;
-  margin: 0;
-  padding: 0;
-}
+@import url('https://fonts.googleapis.com/css2?family=Belleza&display=swap');
 
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Belleza', sans-serif;
+  color: black;
+  background: linear-gradient(to bottom, #60a1c5, #aed4e9);
   margin: 0;
   padding: 0;
-  background-color: #aed4e9;
 }
 
-.logoContainer {
-  display: flex;
-  align-items: center;
+h1, h2, p, a, button {
+  color: black;
 }
 
-.logo {
-  height: 50px;
-  cursor: pointer;
+/* Navegación */
+.navbar-bg {
+  background-color: transparent;
 }
 
-.main-header {
-  background-color: #aed4e9;
-  color: #aed4e9;
-  padding: 10px 0;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  width: 100%;
-}
-
-.header-flex {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.main-nav ul {
-  list-style: none;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 25px;
-  margin: 10px 0;
-  padding: 0;
-}
-
-.main-nav ul li {
-  display: inline-block;
-}
-
-.main-nav ul li a {
-  text-decoration: none;
-  background-color: #aed4e9;
-  color: #aed4e9;
-  padding: 10px 20px;
-  border-radius: 5px;
+.navbar-nav .nav-link {
+  border-radius: 8px;
   transition: background-color 0.3s ease;
 }
 
-.main-nav ul li a:hover {
-  background-color: #aed4e9;
+.navbar-nav .nav-link:hover {
+  background-color: #5091b5;
+  color: black;
 }
 
+/* Buscador */
+.buscador-custom {
+  background: linear-gradient(to right, #60a1c5, #aed4e9);
+  padding: 5px;
+  border-radius: 8px;
+  border: 1px solid black;
+}
+
+.buscador-input {
+  border: none;
+  border-radius: 5px;
+  padding: 6px 10px;
+  color: black;
+}
+
+.buscador-btn {
+  background-color: white;
+  color: black;
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 6px 12px;
+  font-weight: bold;
+}
+
+/* Imagen Principal */
 .imagenPrincipal {
-  background-image: url('zaguan.jpg');
-  background-size: cover;
-  background-position: center;
+  background: linear-gradient(rgba(255,255,255,0.05), rgba(255,255,255,0.05)), url('zaguan.png') no-repeat center center/cover;
   text-align: center;
-  color: white;
-  padding: 100px 20px;
-  position: relative;
+  padding: 120px 20px;
 }
 
 .imagenPrincipalContent {
-  background-color: rgba(0, 0, 0, 0.5);
-  display: inline-block;
-  padding: 30px;
-  border-radius: 10px;
+  max-width: 90%;
+  margin: 0 auto;
+}
+
+.imagenPrincipalContent h1 {
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.imagenPrincipalContent p {
+  font-size: 1.25rem;
+  margin-top: 10px;
 }
 
 .imagenPrincipalBoton {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 25px;
   background: linear-gradient(to right, #0077b6, #00b4d8);
   color: white;
-  padding: 12px 25px;
-  border: 2px solid white;
-  border-radius: 50px;
   text-decoration: none;
+  border-radius: 50px;
   font-weight: bold;
-  margin-top: 20px;
-  display: inline-block;
   transition: background 0.3s ease, transform 0.2s ease;
+  border: 2px solid white;
 }
 
 .imagenPrincipalBoton:hover {
@@ -99,80 +91,45 @@ body {
   transform: scale(1.05);
 }
 
-main {
-  padding: 40px 20px;
-  text-align: center;
+/* Secciones informativas */
+.seccion-informativa {
+  background-color: transparent;
+  text-align: justify;
+  font-size: 1.2rem;
 }
 
-.formulario {
-  max-width: 600px;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-  background-color: white;
-  padding: 30px;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-.input {
-  padding: 10px;
-  font-size: 16px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-}
-
-.textarea {
-  min-height: 100px;
-  resize: vertical;
-}
-
-.checkbox-label {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  font-size: 14px;
-}
-
-.boton-enviar {
-  background-color: #0058a5;
-  color: white;
-  padding: 12px;
-  border: none;
-  border-radius: 5px;
-  font-weight: bold;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.boton-enviar:hover {
-  background-color: #0096c7;
-}
-
-.preferencia-contacto {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: left;
-  gap: 40px;
+.seccion-informativa h2 {
+  text-align: left;
+  font-size: 2rem;
   margin-bottom: 15px;
 }
 
-.preferencia-contacto label {
-  display: flex;
-  align-items: center;
-  gap: 8px;
+/* Footer */
+.footer-custom {
+  background-color: #60a1c5;
 }
 
-.formulario p {
-  text-align: left;
-  margin: 0;
-  font-weight: bold;
+.redes-footer a {
+  transition: transform 0.2s ease;
 }
 
+.redes-footer a:hover {
+  transform: scale(1.1);
+}
 
+/* Responsivo */
 @media (max-width: 768px) {
   .navbar-brand img {
-    height: 80px !important;
+    height: 100px;
+  }
+
+  .redes-footer {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .footer-custom p,
+  .footer-custom a {
+    font-size: 0.9rem;
   }
 }
