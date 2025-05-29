@@ -19,7 +19,7 @@ h1, h2, p, a, button {
 
 .navbar-nav .nav-link {
   border-radius: 8px;
-  transition: background-color 0.3s ease;
+  transition: background-color #60a1c5 0.3s ease;
 }
 
 .navbar-nav .nav-link:hover {
@@ -27,27 +27,67 @@ h1, h2, p, a, button {
   color: black;
 }
 
+/* Elimina fondo y borde del desplegable al pasar el ratón */
+.navbar .dropdown-menu {
+  background-color: transparent;
+  border: none;
+  box-shadow: none; /* Quita sombra si hay */
+}
+
+/* Opcional: Estilo de los elementos dentro del dropdown */
+.navbar .dropdown-menu .dropdown-item {
+  background-color: transparent;
+  color: black;
+  border-radius: 10px;         /* Borde redondeado */
+  padding: 0.5rem 1rem;        /* Espaciado interno */
+  transition: background-color 0.3s ease;
+}
+
+/* Al pasar el mouse por encima del elemento */
+.navbar .dropdown-menu .dropdown-item:hover {
+  background-color: #5091b5;
+  font-weight: bold;           /* Texto en negrita */
+  color: black;
+}
+
+
 /* Buscador */
+.buscador-wrapper:hover .buscador-input {
+  display: block !important;
+  width: 200px;
+  margin-right: 0.5rem;
+  transition: all 0.3s ease-in-out;
+}
+.buscador-wrapper:hover .buscador-input {
+  width: 200px;
+  opacity: 1;
+  pointer-events: auto;
+}
 .buscador-custom {
-  background: linear-gradient(to right, #60a1c5, #aed4e9);
   padding: 5px;
   border-radius: 8px;
-  border: 1px solid black;
+  border: transparent;
 }
 
 .buscador-input {
-  border: none;
-  border-radius: 5px;
-  padding: 6px 10px;
-  color: black;
+  width: 0;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s ease-in-out;
 }
 
 .buscador-btn {
-  background-color: white;
+  background-color: transparent;
   color: black;
-  border: 1px solid black;
+  border: transparent;
   border-radius: 5px;
   padding: 6px 12px;
+  font-weight: bold;
+}
+.resaltado-busqueda {
+  background-color: #5091b5;
+  padding: 2px 4px;
+  border-radius: 4px;
   font-weight: bold;
 }
 
@@ -133,3 +173,29 @@ h1, h2, p, a, button {
     font-size: 0.9rem;
   }
 }
+
+/*Cookies*/
+.cookie-popup {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  right: 20px;
+  background-color: #ffffff;
+  color: #000;
+  padding: 1rem;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  z-index: 1000;
+  border-radius: 5px;
+  max-width: 500px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.cookie-popup p {
+  margin: 0 0 10px 0;
+}
+
+.d-none {
+  display: none !important;
+}
+
