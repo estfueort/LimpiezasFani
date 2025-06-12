@@ -63,59 +63,61 @@
   </div>
 
   <!-- Formulario -->
-  <form class="container mt-4">
-    <div class="mb-3">
-      <input type="text" class="form-control" placeholder="Nombre completo" required>
-    </div>
-    <div class="mb-3">
-      <input type="email" class="form-control" placeholder="Correo electrónico" required>
-    </div>
-    <div class="mb-3">
-      <input type="tel" class="form-control" placeholder="Teléfono" required>
-    </div>
-    <div class="mb-3">
-      <textarea class="form-control" placeholder="¿Qué tipo de servicio necesitas?" required></textarea>
-    </div>
+  <form class="container mt-4" action="https://formsubmit.co/limpiezasfani@gmail.com" method="POST">
+  <!-- Oculta captcha y redirección tras enviar -->
+  <input type="hidden" name="_captcha" value="false">
+  <input type="hidden" name="_next" value="https://tusitio.com/gracias.html">
 
-    <p class="fw-bold fs-5">¿Cómo prefiere que contactemos con usted?</p>
+  <div class="mb-3">
+    <input type="text" class="form-control" name="nombre" placeholder="Nombre completo" required>
+  </div>
+  <div class="mb-3">
+    <input type="email" class="form-control" name="email" placeholder="Correo electrónico" required>
+  </div>
+  <div class="mb-3">
+    <input type="tel" class="form-control" name="telefono" placeholder="Teléfono" required>
+  </div>
+  <div class="mb-3">
+    <textarea class="form-control" name="mensaje" placeholder="¿Qué tipo de servicio necesitas?" required></textarea>
+  </div>
 
-    <div class="form-check">
-      <input class="form-check-input" type="checkbox" id="checkTelefono" data-bs-toggle="collapse" data-bs-target="#campoTelefonoExtra" aria-expanded="false" aria-controls="campoTelefonoExtra">
-      <label class="form-check-label fs-5" for="checkTelefono">Teléfono</label>
-    </div>
+  <p class="fw-bold fs-5">¿Cómo prefiere que contactemos con usted?</p>
 
-    <div class="collapse mb-3" id="campoTelefonoExtra">
-      <div class="input-group">
-        <select class="form-select" style="max-width: 130px;">
-          <option selected value="+34">🇪🇸 +34</option>
-          <option value="+33">🇫🇷 +33</option>
-          <option value="+44">🇬🇧 +44</option>
-          <option value="+49">🇩🇪 +49</option>
-          <option value="+1">🇺🇸 +1</option>
-          <option value="+52">🇲🇽 +52</option>
-          <option value="+39">🇮🇹 +39</option>
-          <option value="+351">🇵🇹 +351</option>
-        </select>
-        <input type="tel" class="form-control" placeholder="Número de teléfono" pattern="[0-9]{6,15}" inputmode="numeric">
-      </div>
-    </div>
+  <div class="form-check">
+    <input class="form-check-input" type="checkbox" name="contacto_telefono" id="checkTelefono">
+    <label class="form-check-label fs-5" for="checkTelefono">Teléfono</label>
+  </div>
 
-    <div class="form-check mb-3">
-      <input class="form-check-input" type="checkbox" id="checkEmail" data-bs-toggle="collapse" data-bs-target="#campoEmailExtra" aria-expanded="false" aria-controls="campoEmailExtra">
-      <label class="form-check-label fs-5" for="checkEmail">Correo electrónico</label>
-    </div>
+  <div class="mb-3">
+    <select class="form-select" name="prefijo_telefono">
+      <option selected value="+34">🇪🇸 +34</option>
+      <option value="+33">🇫🇷 +33</option>
+      <option value="+44">🇬🇧 +44</option>
+      <option value="+49">🇩🇪 +49</option>
+      <option value="+1">🇺🇸 +1</option>
+      <option value="+52">🇲🇽 +52</option>
+      <option value="+39">🇮🇹 +39</option>
+      <option value="+351">🇵🇹 +351</option>
+    </select>
+    <input type="tel" class="form-control mt-2" name="telefono_extra" placeholder="Número de teléfono adicional" pattern="[0-9]{6,15}">
+  </div>
 
-    <div class="collapse mb-3" id="campoEmailExtra">
-      <input type="email" class="form-control" placeholder="Introduce tu correo electrónico">
-    </div>
+  <div class="form-check mb-3">
+    <input class="form-check-input" type="checkbox" name="contacto_email" id="checkEmail">
+    <label class="form-check-label fs-5" for="checkEmail">Correo electrónico</label>
+  </div>
 
-    <div class="form-check mb-3">
-      <input class="form-check-input" type="checkbox" id="aceptoDatos" required>
-      <label class="form-check-label fs-5" for="aceptoDatos">Acepto el tratamiento de mis datos.</label>
-    </div>
+  <div class="mb-3">
+    <input type="email" class="form-control" name="email_extra" placeholder="Correo electrónico adicional">
+  </div>
 
-    <button type="submit" class="btn btn-primary">Enviar</button>
-  </form>
+  <div class="form-check mb-3">
+    <input class="form-check-input" type="checkbox" id="aceptoDatos" name="acepto_datos" required>
+    <label class="form-check-label fs-5" for="aceptoDatos">Acepto el tratamiento de mis datos.</label>
+  </div>
+
+  <button type="submit" class="btn btn-primary">Enviar</button>
+</form>
 
   <!-- Footer -->
   <footer class="footer-custom text-white py-4 mt-auto">
