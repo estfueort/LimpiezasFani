@@ -111,10 +111,12 @@
     <input type="email" class="form-control" name="email_extra" placeholder="Correo electrónico adicional">
   </div>
 
-  <div class="form-check mb-3">
-    <input class="form-check-input" type="checkbox" id="aceptoDatos" name="acepto_datos" required>
-    <label class="form-check-label fs-5" for="aceptoDatos">Acepto el tratamiento de mis datos.</label>
-  </div>
+<div class="form-check mb-3">
+  <input class="form-check-input" type="checkbox" id="aceptoDatos" name="acepto_datos">
+  <label class="form-check-label fs-5 required-label" for="aceptoDatos">Acepto el tratamiento de mis datos.</label>
+  <div id="errorDatos" class="form-error">Debes aceptar el tratamiento de tus datos.</div>
+</div>
+<div id="errorContacto" class="form-error">Debe proporcionar al menos un método de contacto (teléfono o email).</div>
 
   <button type="submit" class="btn btn-primary">Enviar</button>
 </form>
